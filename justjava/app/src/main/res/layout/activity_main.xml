@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,19 +9,56 @@
     android:orientation="vertical"
     android:paddingLeft="8dp">
 
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        />
+
     <TextView
+
+        android:layout_margin="8dp"
+        android:text="TOPPINGS"
+        android:textColor="#808080"
+
+        style="@style/HeaderTextStyle"/>
+    
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingLeft="24dp"
+            android:text="Whipped Cream"
+            android:textSize="16sp"
+            />
+    <CheckBox
+        android:id="@+id/chocolate_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:paddingLeft="24dp"
+        android:text="Chocolate"
+        android:textSize="16sp"
+        />
+
+
+    <TextView
+
+        android:layout_margin="8dp"
         android:text="QUANTITY"
         android:textColor="#808080"
-        android:textSize="16sp" />
+        style="@style/HeaderTextStyle" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="left">
+        android:gravity="left"
+        android:orientation="horizontal">
 
 
         <Button
@@ -56,16 +96,15 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
         android:layout_margin="8dp"
-        android:text="price"
-        android:textAllCaps="true"
+        android:text="order summary"
+
         android:textColor="#808080"
-        android:textSize="16sp" />
+        style="@style/HeaderTextStyle" />
 
     <TextView
-        android:id="@+id/price_text_view"
+        android:id="@+id/order_summary_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -86,3 +125,4 @@
 
 
 </LinearLayout>
+</ScrollView>
